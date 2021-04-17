@@ -1,0 +1,17 @@
+FUNCTION Insert_sort(var A: INTEGER, vect_A: ARRAY_OF_INTEGER° 
+VAR
+  i: INTEGER;
+  pos: INTEGER.
+  elm: INTEGER;
+BEGIN
+FOR i FROM 1 TO vect_A.length-1 STEP 1 DO
+pos:= Insert_sort(i, vect_A[i]);
+END_FOR
+i:= pos-1;
+WHILE (i>=0 and vect_A[i]>elm) DO
+    vect_A[i+1]:= vect_A[i];
+    i:= i-1;
+    vect_A[i+1]:= elm;
+END_WHILE
+    
+END
